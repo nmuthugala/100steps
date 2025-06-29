@@ -27,6 +27,7 @@
       align-items: center;
       text-align: center;
       flex-direction: column;
+      position: relative;
     }
 
     .overlay {
@@ -68,17 +69,21 @@
       text-decoration: underline;
     }
 
+    /* Mobile: Float overlay at bottom */
     @media (max-width: 1024px) {
       body {
-        align-items: flex-start;
         justify-content: flex-start;
-        padding-top: 60px;
+        align-items: stretch;
       }
 
       .overlay {
-        margin: 0 auto;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
         width: 90%;
         text-align: center;
+        padding: 30px 20px;
       }
 
       .title {
